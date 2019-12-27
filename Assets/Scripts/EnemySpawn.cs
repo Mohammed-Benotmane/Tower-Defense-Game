@@ -21,7 +21,7 @@ public class EnemySpawn : MonoBehaviour
         {
             isSpawning = true;
             int enemyIndex = Random.Range(0, enemies.Length);
-            StartCoroutine(SpawnObject(enemyIndex, Random.Range(1, 3)));
+            StartCoroutine(SpawnObject(enemyIndex, Random.Range(3, 8)));
         }
     }
 }

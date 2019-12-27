@@ -8,12 +8,15 @@ public class TowerBehaviour : MonoBehaviour
     public float rotationSpeed;
     public GameObject bulletPrefab;
     public GameObject bulletSpawnPoint;
+
+    public static int score = 0;
+    public Text text;
     GameObject bulletTemp;
     public GameObject hitEffect;
     float towerHealth = 100;
 
     public Slider healthBar;
-    public float timeBetweenShots = 0.1f;
+    public float timeBetweenShots = 0.25f;
 
     private float timestamp;
 
@@ -31,6 +34,9 @@ public class TowerBehaviour : MonoBehaviour
         {
             bulletTemp = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
             timestamp = Time.time + timeBetweenShots;
+
+            bulletTemp.GetComponent<BulletBehaviour>().textScore = text;
+            
         }
     }
 
@@ -53,6 +59,17 @@ public class TowerBehaviour : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+
+        if (collider.gameObject.tag == "boss")
+        {
+            GameObject hitTemp = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(hitTemp, 1);
+            Destroy(collider.gameObject);
+            towerHealth =0;
+            healthBar.value= towerHealth;
+                Destroy(gameObject);
+            
         }
 
     }

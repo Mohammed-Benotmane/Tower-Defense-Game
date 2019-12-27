@@ -4937,6 +4937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 110790, guid: 0f75f6db4a318f54382e0c98b2226db8, type: 3}
+  text: {fileID: 0}
 --- !u!54 &296186362
 Rigidbody:
   m_ObjectHideFlags: 0

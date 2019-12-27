@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -23,6 +25,12 @@ public class EnemySpawn : MonoBehaviour
             int enemyIndex = Random.Range(0, enemies.Length);
             StartCoroutine(SpawnObject(enemyIndex, Random.Range(3, 8)));
         }
+    }
+
+    public static IEnumerator WaitForRestart()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 

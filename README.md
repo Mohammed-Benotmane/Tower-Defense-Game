@@ -3,10 +3,10 @@
 ![GitHub license](https://img.shields.io/github/license/Mohammed-Benotmane/Tower-Defense-Game.svg)
 ![Jetlight studio](https://img.shields.io/badge/Made%20by-Jetlight%20studio-blue.svg?color=082544)
 
-## Description
+## Description:
 this is a game made with Unity, the goal is to protect the tower against robots.
 
-## ScreenShot
+## ScreenShot:
 <img src="ScreenShot/tower.gif" />
 
 ## Tools & languages:
@@ -21,5 +21,5 @@ Feel free to fork this project and add whatever you like. If you have any sugges
 ## Team:
 [Jetlighters](https://github.com/JetLightStudio) having fun.
 
-### Special thanks
+### Special thanks:
 my BestFriend and tutor ![Oussama Bonnor](https://github.com/oussamabonnor1) 
